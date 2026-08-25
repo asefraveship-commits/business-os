@@ -1,0 +1,33 @@
+name: Build Vosk Farsi Offline Bundle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-vosk-fa-offline.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Download Vosk wheel and Persian model
+        run: |
+          python -m pip download --no-deps vosk==0.3.45 -d bundle
+          cd bundle
+          curl -L --fail --retry 3 -o vosk-model-small-fa-0.42.zip https://alphacephei.com/vosk/models/vosk-model-small-fa-0.42.zip
+          unzip -q vosk-model-small-fa-0.42.zip
+          rm vosk-model-small-fa-0.42.zip
+          printf '%s\n' 'Vosk 0.3.45 + Persian small-fa-0.42 offline bundle.' > README.txt
+      - name: Upload bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: vosk-fa-0.42-offline-linux
+          path: bundle/
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
