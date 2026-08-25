@@ -36,7 +36,7 @@ jobs:
         run: |
           cd whisper.cpp
           bash models/download-ggml-model.sh base
-          ./build/bin/quantize models/ggml-base.bin models/ggml-base-q5_1.bin q5_1
+          ./build/bin/whisper-quantize models/ggml-base.bin models/ggml-base-q5_1.bin q5_1
 
       - name: Assemble portable bundle
         run: |
