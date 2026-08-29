@@ -19,3 +19,14 @@
 ### Drift guard
 
 Do not reopen architecture, pricing or product design unless a valid P0/freeze exception is found. Do not rebuild the approved demo from scratch.
+
+## CP-0002 — 2026-08-29 — Site baseline verified
+
+- Approved live/demo reference remains `samanesh-interactive-demo.firdos09867.chatgpt.site`.
+- Prior direct code audit identifies the source as `rahbin-offline-source`, with `components/premium-workspace.tsx` as a key workspace implementation file.
+- Baseline is a working module/submodule premium RTL demo and must be upgraded in place.
+- Verified implementation gaps: unified persona/runtime identity, independent submodule surfaces, state-driven recognition/hall, and later frozen W1 flows not yet represented in live code.
+- `rait-os` and unrelated Drive HTML files are explicitly rejected as RAHBIN source candidates.
+- Editable Work source is not mounted in current connected sources; this is recorded as a source-location limitation, not a reason to rebuild.
+- Evidence file: `governance/SITE_BASELINE_AUDIT_2026-08-29.md`.
+- Next execution step: activate Identity & Policy Enforcement contract work and prepare the first integrated patch against the same source baseline.
