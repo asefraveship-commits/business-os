@@ -1,0 +1,43 @@
+RAHBIN W1 — Build 0.3.14 / PATCH-34 Public Verification Evidence
+Date: 2026-08-30
+Architecture: RAHBIN-ARCH-V2.4.9-r2
+Frozen implementation release: RAHBIN-W1-FREEZE-2026-08-29
+Workstream: W1-13 Final Release Certification
+Classification: W1-P0 release accessibility/source-integrity fix
+Status: SOURCE PASS / FINAL CERT BLOCKED
+Deployment: NOT PERFORMED
+
+Source ZIP SHA-256:
+0c330839f234a7e4aeab9c45227f85069a46acccf7ba61eabf7bbd08b62ef75c
+
+Verification gates:
+- Release accessibility source contract: 10/10 PASS
+- AST JSX accessibility audit: 27 product TSX / 0 issues
+- Source scope + rollback to exact Build 0.3.13: 331 assertions PASS
+- Offline Capability Manifest/source readiness: 22 assertions PASS
+- Golden E2E source roll-up: 10/10 PASS / 53 assertions
+- Persona certification: 7/7 PASS in deterministic source cases
+- Source RBAC leakage: 0
+- Persona/RBAC/Invariants: 88 assertions PASS
+- Security/source guards: 25/25 PASS
+- Dependency-free runnable regression: 136/136 PASS
+- Route gate: 271/271 unique; 1173/1173 tab round-trips; 271/271 fallback PASS
+- TS/TSX parse: 148 files / 0 errors
+- CSS brace balance: 0
+- Source ZIP integrity: PASS
+
+Release P0 closures:
+- frozen Design Contract body baseline aligned to 16px
+- shared interactive targets aligned to >=44px
+- raw controls have accessible names or label association
+- AI Video Storyboard icon-only actions have Persian accessible names
+- Dialog/Spinner accessible text localized
+- unused legacy ChatGPT-auth source removed
+- Offline Capability Manifest identity aligned to 0.3.14/PATCH-34
+- no app/api, db, drizzle or domain-state source changed
+
+Dependency-backed build remains NOT RE-VERIFIED. npm run build exits 69 before application compilation because vinext is unavailable. Dependency-install attempts in this runtime failed on npm registry DNS/network resolution with EAI_AGAIN. This is not recorded as a build PASS or source compile failure.
+
+Final Release Certificate remains BLOCKED pending dependency-backed build; rendered/manual Golden evidence; rendered RTL/Persian and responsive certification; WCAG 2.2 AA automated plus manual keyboard/screen-reader evidence; rendered Offline Artifact smoke using the same RC; RC to Canary to Stable same-artifact evidence; and runtime rollback drill.
+
+This public evidence intentionally excludes proprietary pricing, private RBAC details, credentials, customer data, private source documents and confidential Sheet exports.
