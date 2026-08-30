@@ -1,0 +1,33 @@
+RAHBIN W1 — PUBLIC-SAFE RELEASE GOVERNANCE REFRESH
+Date: 2026-08-30
+Build: RAHBIN-W1-BUILD-0.3.15
+Checkpoint: PATCH-35
+W1 Release: 90%
+W2 Governance: 100%
+W2 Implementation: 0%
+DEPLOYMENT-VERIFIED: NO
+
+CURRENT EXACT SOURCE
+Source SHA256: b17296cbcfcace58b7d15bb218a589f45d36825429e5ee790b88ce9089fefbe0
+Matrix-aligned Rendered Cert Kit SHA256: 50e6052c70c8ae44a461cfd6b59d3fe03366e7eec0830bcbba57960fa9a32022
+RC Runner SHA256: 080b363c31de183a096783295edc9257bd79f14893dfada881dd5fbdaf94bad5
+Promotion Pack SHA256: fae8a676a8667aec06d7818f11b7eeca1668c56e44d0223ccb842e78b9e2c945
+Hardened Final Cert Evaluator SHA256: dd27bef781dde7830a8fa0ea40d95cbbc2728de9e223b47026974059f54e6329
+Canary Telemetry Privacy Gate SHA256: a93e666d098bb065d646f8fe66fe42580cccd310858533bf87b27faae2a485e2
+Current private Registry Manifest SHA256: 635b575650ddd516f4e5480dd081884f2cd0cb8690479590a0dc658c1d3235cf
+
+VERIFIED IN THIS REFRESH
+- Critical release artifacts were re-downloaded from the private registry and byte-SHA verified against the current manifest.
+- Final Cert Evaluator was cross-checked against Release_Certification_Matrix_W1 and hardened fail-closed: G0 through G15 must each be PASS with non-empty evidence references, and CERT roll-up must be PASS.
+- Evaluator positive complete-evidence self-test returns CERT_ELIGIBLE; missing G15 returns CERT_BLOCKED with non-zero exit.
+- Canary telemetry payload gate is default-deny: minimal release/route/outcome/latency signals are allowed; sensitive HR/payroll/PII/message/auth/token/cookie/amount payload keys are blocked.
+- Network-runner handoff, manual-cert evidence pack and pre-canary privacy gate produced by the hourly executor were byte-SHA checked and reviewed against the release policy.
+
+CURRENT BLOCKERS
+- Current ChatGPT sandbox still cannot resolve registry.npmjs.org; exact dependency-backed build was intentionally not re-run because the condition did not change.
+- The legacy public preview URL cannot currently be identity-verified from this environment and is not counted as rendered release evidence.
+
+REMAINING RELEASE SEQUENCE
+Exact network build -> immutable built artifact SHA -> Cloudflare Vite/workerd runtime -> rendered Golden/Matrix/Persona/RBAC/Security -> manual RTL/Responsive/A11y/header review -> Offline artifact smoke -> runtime rollback -> same-artifact RC -> Canary -> Stable -> hardened Final Cert Evaluator -> W1 Close.
+
+No product source, private pricing, RBAC policy details, secrets, or customer data are included in this evidence file.
