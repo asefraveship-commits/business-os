@@ -1,0 +1,59 @@
+RAHBIN W1 — Build 0.3.12 / PATCH-32 Public Source Certification Evidence
+Date: 2026-08-30
+Architecture: RAHBIN-ARCH-V2.4.9-r2
+Frozen implementation release: RAHBIN-W1-FREEZE-2026-08-29
+Workstream: W1-13 Demo Personas & Golden QA / Release Certification
+Classification: W1-P0 Fix + Release QA
+Status: SOURCE RELEASE-CERTIFICATION CLOSURE VERIFIED / FINAL RELEASE CERTIFICATE BLOCKED
+Deployment: NOT PERFORMED
+Stable/Public Release: NOT CERTIFIED
+
+Source verification:
+- Employee Experience pure: 62 assertions PASS
+- Security/source guards: 25/25 PASS
+- Golden E2E source roll-up: 10/10 PASS (53 assertions)
+- Persona certification: 7/7 PASS in deterministic source policy/state cases
+- RBAC leakage: 0 in source positive/negative cases
+- Persona/RBAC/Invariants suite: 88 assertions PASS
+- Release source gates: 24 assertions PASS
+- Dependency-free regression: 135/135 PASS
+- React/Vite-backed tests blocked by unavailable dependencies: 9; NOT counted as PASS
+- Route gate: 271/271 unique; 1173/1173 tab round-trips; 271/271 fallback PASS
+- TS/TSX parse: 150 files / 0 errors
+- Protected unrelated operational + Commercial Core: 10/10 byte-identical versus exact Build 0.3.11
+- CSS brace balance: 0
+- Product-level dead-button source candidates: 0
+- Source ZIP integrity: PASS
+
+Source ZIP SHA-256:
+b91d5e7e15456b49c97c0ba6b01bd53d1c86bc206426447f871c74b1a22007ea
+
+Key source P0 closures:
+- canonical Wallet/Ledger across Employee Experience surfaces
+- peer Recognition is Prestige evidence and mints 0 RB by default
+- public RB cash-out denied; RB remains closed-loop Reward Credit
+- verified Mission reward is employee-bound, requires a closed verified Mission and rejects replay
+- governed Store reserve/capture/fulfill/release/refund, stock, limited-drop, manager-budget and Goal Vault state
+- Academy fail/retry/pass, retrieval D3/D7/D21, practical verification, D30/D60/D90 and certificate flow
+- earned Prestige remains separate from purchased cosmetics; Story privacy source gate present
+
+Dependency-backed build attempt:
+- npm run build exit 69 BEFORE application compilation
+- blocker: vinext unavailable in current runtime
+- classification: environment/dependency blocker
+- dependency-backed build: NOT RE-VERIFIED
+- this is NOT a build PASS and NOT a source compile failure
+
+Final Release Certificate remains BLOCKED pending:
+- dependency-backed build
+- rendered/manual Golden hybrid evidence where required
+- rendered RTL/Persian certification
+- responsive viewport certification
+- WCAG 2.2 AA automated + manual keyboard/screen-reader evidence
+- RC staging -> Canary -> Stable same-artifact evidence
+- Offline Capability Manifest PASS
+- Rollback Drill PASS
+
+Decision: Build 0.3.12 / PATCH-32 may be frozen as Source Release-Certification Closure only. It must not be represented as Stable/Public Release PASS.
+
+Source authority remains Google Sheet CURRENT. This public evidence intentionally excludes proprietary pricing, private RBAC details, credentials, customer data, private source documents and confidential Sheet exports.
