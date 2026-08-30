@@ -1,0 +1,32 @@
+RAHBIN W1 — PUBLIC-SAFE RUNTIME PRE-FLIGHT EVIDENCE
+Build: RAHBIN-W1-BUILD-0.3.15
+Checkpoint: PATCH-35
+Status: SOURCE/CONFIG PRE-FLIGHT PASS — DEPENDENCY BUILD/RUNTIME STILL PENDING
+DEPLOYMENT-VERIFIED: NO
+
+Source ZIP SHA-256:
+b17296cbcfcace58b7d15bb218a589f45d36825429e5ee790b88ce9089fefbe0
+
+PRE-FLIGHT RESULTS
+- Node engine requirement is compatible with the current sandbox runtime.
+- Exact dependency install remains blocked in the current sandbox by registry DNS/network availability; this does not establish a source defect.
+- Local rendered-certification runtime is npm run dev using Vite + @cloudflare/vite-plugin/workerd.
+- Local D1 demo binding is declared and demo schema bootstrap is idempotent; no manual DB migration is required before local rendered Golden testing.
+- R2 is not required for current W1 demo paths.
+- Product source does not import next/image; rendered Golden paths do not require the Cloudflare IMAGES optimizer binding.
+- Local static asset inventory checked: Rahbin mark, persona fallback, and both Story office assets are present; missing local static refs: 0.
+- Persian UI font is packaged through the local vazirmatn dependency.
+- Demo persona photography remains intentionally online-first with a mandatory local fallback, matching the frozen Offline Capability Manifest. Third-party-host behavior remains a rendered runtime review item rather than a source P0.
+- No new Cloudflare binding, D1 bootstrap, local asset, or host-configuration source P0 was found.
+
+REMAINING GATES
+1. Exact dependency-backed build on the frozen source SHA.
+2. Cloudflare Vite/workerd rendered runtime.
+3. Rendered Golden 10/10.
+4. Rendered Persona 7/7 + RBAC/security checks.
+5. RTL/Persian/responsive/accessibility and security-header/third-party review.
+6. Offline Artifact smoke.
+7. Runtime rollback drill.
+8. Same-artifact RC -> Canary -> Stable.
+
+W1 Release remains 90%. Pre-flight-only evidence does not count as a rendered/runtime PASS.
