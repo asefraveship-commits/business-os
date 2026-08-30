@@ -1,0 +1,25 @@
+RAHBIN W1 — PUBLIC-SAFE BUILT ARTIFACT PACKAGER EVIDENCE
+Build: RAHBIN-W1-BUILD-0.3.15
+Checkpoint: PATCH-35
+Status: PACKAGER READY / BUILT ARTIFACT NOT YET CREATED
+DEPLOYMENT-VERIFIED: NO
+
+Built Artifact Packager ZIP SHA-256:
+bfd3271242a43e756916c16a3265be4c4cbe38ff6df14cd7f0092b6be08f92e2
+
+CONTRACT
+- Certification build must start from a fresh exact-source extraction with no pre-existing dist directory.
+- After exact build, dist/client and dist/server must exist, be non-empty, and contain JavaScript artifacts.
+- The packager records file-level SHA-256 values for the complete dist tree.
+- The promotion archive is deterministic: sorted paths, fixed mtime/ownership and gzip without timestamps.
+- The emitted built-artifact SHA becomes the immutable identity for RC -> Canary -> Stable.
+- Any rebuild creates a new candidate that requires re-certification.
+
+SELF-TEST
+- Pre-build clean-dist guard: PASS.
+- Deterministic archive test: PASS; the same synthetic dist was packed twice and produced the same SHA.
+
+CURRENT STATE
+- Exact 0.3.15 dependency-backed build is still pending because the current sandbox cannot resolve registry.npmjs.org.
+- Therefore no real built-artifact SHA exists yet.
+- W1 Release remains 90%; packager readiness alone is not a runtime/deployment PASS.
