@@ -14,36 +14,40 @@ GitHub must **never override** the CURRENT Google Sheet.
 
 - Architecture: `RAHBIN-ARCH-V2.4.9-r2`
 - Frozen implementation release: `RAHBIN-W1-FREEZE-2026-08-29`
-- Active implementation build: `RAHBIN-W1-BUILD-0.3.11`
-- Active checkpoint: `PATCH-31`
+- Active implementation build: `RAHBIN-W1-BUILD-0.3.12`
+- Active checkpoint: `PATCH-32`
 - W1-04 status: `SOURCE COMPLETE`
 - W1-12 status: `SOURCE COMPLETE`
-- Source ZIP SHA-256: `4582c317ed29ecdf0ccd5e9d4e02f7c5bfa95299c67206e24dbfe473546d3331`
+- W1-13 status: `SOURCE RELEASE-CERTIFICATION CLOSURE VERIFIED / FINAL CERT BLOCKED`
+- Source ZIP SHA-256: `b91d5e7e15456b49c97c0ba6b01bd53d1c86bc206426447f871c74b1a22007ea`
 
 ## Latest source-verified checkpoint
 
-`Build 0.3.11 / PATCH-31` closes the frozen W1-12 AI Video Producer Beta source scope at Autonomy L2. The W1 role uses a dedicated stateful pipeline from Brief and verified Product Truth through Asset Readiness, Creative Plan/Cost Preview, Storyboard, controlled generation, AI QC, Human Review/Approval, Export and a demo-only publish queue. Full M17 execution and M08/M09 execution remain outside Wave 1.
+`Build 0.3.12 / PATCH-32` closes source-verifiable W1-13 P0 drift and release-QA prerequisites. It does **not** issue the Final Release Certificate and does **not** certify a Stable/Public release.
 
 Public-safe verification summary:
 
-- AI Video static contract: `20/20 PASS`
-- AI Video pure state machine: `23 assertions PASS`
-- S18 source-contract audit: `27/27 PASS`
-- DB/API security audit: `15/15 PASS`
+- Employee Experience pure: `62 assertions PASS`
+- Security/source guards: `25/25 PASS`
+- Golden E2E source roll-up: `10/10 PASS` (`53 assertions`)
+- Persona certification: `7/7 PASS` in deterministic source cases
+- RBAC leakage: `0` in source positive/negative cases
+- Persona/RBAC/Invariants suite: `88 assertions PASS`
+- Release source gates: `24 assertions PASS`
 - Dependency-free runnable regression: `135/135 PASS`
 - React/Vite-backed tests blocked by unavailable dependencies: `9` (not counted as PASS)
-- Strict pure TypeScript: `PASS`
-- TS/TSX parse: `149 files / 0 errors`
 - Route gate: `271/271` unique, `1173/1173` tab round-trips, `271/271` fallback
-- Protected operational + Commercial Core: `10/10 byte-identical` versus exact Build 0.3.10
+- TS/TSX parse: `150 files / 0 errors`
+- Protected unrelated operational + Commercial Core: `10/10 byte-identical` versus exact Build 0.3.11
 - CSS brace balance: `0`
+- Product-level dead-button source candidates: `0`
 - Source ZIP integrity: `PASS`
 
-Security and scope boundaries are explicit: public provider/model/credential injection, Product Truth injection, approval/budget override, L3/L4 autonomy and live external publishing are denied. No live video provider adapter is claimed connected.
+Key W1-P0 closures include canonical Wallet/Ledger state across Employee Experience surfaces, closed-loop RB with public cash-out denied, peer Recognition producing Prestige evidence rather than spendable RB, employee-bound/idempotent verified Mission rewards, governed Store transaction lifecycle, Academy fail/retry/pass and 30/60/90 evidence flow, and earned Prestige remaining separate from purchased cosmetics.
 
 Dependency-backed release build is **NOT RE-VERIFIED**. `npm run build` exits `69` before application compilation because `vinext` is unavailable in the current runtime. This remains an environment/dependency blocker, not a source compile failure and not a build PASS. No deployment is claimed.
 
-Next frozen path: `W1-13 Release Certification` — 10 Golden Scenarios, RBAC leakage=0, P0 inconsistency=0, dead buttons=0, reset/failure recovery and release smoke QA.
+Final Release Certificate remains **BLOCKED** pending dependency-backed build, rendered/manual Golden hybrid evidence, rendered RTL/Persian and responsive certification, WCAG 2.2 AA automated plus manual keyboard/screen-reader evidence, RC → Canary → Stable same-artifact evidence, Offline Capability Manifest PASS, and Rollback Drill PASS.
 
 ## Scope change classification
 
