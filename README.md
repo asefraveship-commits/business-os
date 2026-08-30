@@ -14,40 +14,37 @@ GitHub must **never override** the CURRENT Google Sheet.
 
 - Architecture: `RAHBIN-ARCH-V2.4.9-r2`
 - Frozen implementation release: `RAHBIN-W1-FREEZE-2026-08-29`
-- Active implementation build: `RAHBIN-W1-BUILD-0.3.12`
-- Active checkpoint: `PATCH-32`
+- Active implementation build: `RAHBIN-W1-BUILD-0.3.13`
+- Active checkpoint: `PATCH-33`
 - W1-04 status: `SOURCE COMPLETE`
 - W1-12 status: `SOURCE COMPLETE`
-- W1-13 status: `SOURCE RELEASE-CERTIFICATION CLOSURE VERIFIED / FINAL CERT BLOCKED`
-- Source ZIP SHA-256: `b91d5e7e15456b49c97c0ba6b01bd53d1c86bc206426447f871c74b1a22007ea`
+- W1-13 status: `RELEASE P0 SOURCE FREEZE VERIFIED / FINAL CERT BLOCKED`
+- Source ZIP SHA-256: `f61fc2dfc6e37d4caeec73b2f1bc9838043b93f5f6ae9baf10c560081c862ff0`
 
 ## Latest source-verified checkpoint
 
-`Build 0.3.12 / PATCH-32` closes source-verifiable W1-13 P0 drift and release-QA prerequisites. It does **not** issue the Final Release Certificate and does **not** certify a Stable/Public release.
+`Build 0.3.13 / PATCH-33` is a release-only W1-P0 fix on top of Build 0.3.12. It closes source-level Offline Capability Manifest and rollback-readiness blockers without changing product/domain behavior.
 
 Public-safe verification summary:
 
+- Offline Capability Manifest/source readiness: `25 assertions PASS`
+- Source rollback drill to exact Build 0.3.12: `326 assertions PASS`
 - Employee Experience pure: `62 assertions PASS`
 - Security/source guards: `25/25 PASS`
 - Golden E2E source roll-up: `10/10 PASS` (`53 assertions`)
 - Persona certification: `7/7 PASS` in deterministic source cases
 - RBAC leakage: `0` in source positive/negative cases
 - Persona/RBAC/Invariants suite: `88 assertions PASS`
-- Release source gates: `24 assertions PASS`
-- Dependency-free runnable regression: `135/135 PASS`
-- React/Vite-backed tests blocked by unavailable dependencies: `9` (not counted as PASS)
 - Route gate: `271/271` unique, `1173/1173` tab round-trips, `271/271` fallback
 - TS/TSX parse: `150 files / 0 errors`
-- Protected unrelated operational + Commercial Core: `10/10 byte-identical` versus exact Build 0.3.11
 - CSS brace balance: `0`
-- Product-level dead-button source candidates: `0`
 - Source ZIP integrity: `PASS`
 
-Key W1-P0 closures include canonical Wallet/Ledger state across Employee Experience surfaces, closed-loop RB with public cash-out denied, peer Recognition producing Prestige evidence rather than spendable RB, employee-bound/idempotent verified Mission rewards, governed Store transaction lifecycle, Academy fail/retry/pass and 30/60/90 evidence flow, and earned Prestige remaining separate from purchased cosmetics.
+PATCH-33 keeps remote demo persona photos for online presentation but every product rendering has a local `/persona-fallback.svg` when the network image fails. The machine-readable Offline Capability Manifest explicitly marks production OTP/SSO, real payment, live connectors, live AI provider execution and external publishing as unavailable or fixture-only offline. No DB, Drizzle, API route, entitlement, payment, session or domain-state source is changed by PATCH-33.
 
-Dependency-backed release build is **NOT RE-VERIFIED**. `npm run build` exits `69` before application compilation because `vinext` is unavailable in the current runtime. This remains an environment/dependency blocker, not a source compile failure and not a build PASS. No deployment is claimed.
+Dependency-backed release build is **NOT RE-VERIFIED**. `npm run build` exits `69` before application compilation because `vinext` is unavailable. A dependency-install attempt in the current runtime reached npm registry requests but repeatedly failed with `EAI_AGAIN` DNS/network resolution errors. This remains a runtime/network dependency blocker, not a source compile failure and not a build PASS.
 
-Final Release Certificate remains **BLOCKED** pending dependency-backed build, rendered/manual Golden hybrid evidence, rendered RTL/Persian and responsive certification, WCAG 2.2 AA automated plus manual keyboard/screen-reader evidence, RC → Canary → Stable same-artifact evidence, Offline Capability Manifest PASS, and Rollback Drill PASS.
+Final Release Certificate remains **BLOCKED** pending dependency-backed build, rendered/manual Golden hybrid evidence, rendered RTL/Persian and responsive certification, WCAG 2.2 AA automated plus manual keyboard/screen-reader evidence, rendered Offline Artifact smoke using the same RC, RC → Canary → Stable same-artifact evidence, and a runtime rollback drill on the deployable candidate.
 
 ## Scope change classification
 
