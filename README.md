@@ -14,33 +14,35 @@ GitHub must **never override** the CURRENT Google Sheet.
 
 - Architecture: `RAHBIN-ARCH-V2.4.9-r2`
 - Frozen implementation release: `RAHBIN-W1-FREEZE-2026-08-29`
-- Active implementation build: `RAHBIN-W1-BUILD-0.3.13`
-- Active checkpoint: `PATCH-33`
+- Active implementation build: `RAHBIN-W1-BUILD-0.3.14`
+- Active checkpoint: `PATCH-34`
 - W1-04 status: `SOURCE COMPLETE`
 - W1-12 status: `SOURCE COMPLETE`
-- W1-13 status: `RELEASE P0 SOURCE FREEZE VERIFIED / FINAL CERT BLOCKED`
-- Source ZIP SHA-256: `f61fc2dfc6e37d4caeec73b2f1bc9838043b93f5f6ae9baf10c560081c862ff0`
+- W1-13 status: `RELEASE ACCESSIBILITY SOURCE FREEZE VERIFIED / FINAL CERT BLOCKED`
+- Source ZIP SHA-256: `0c330839f234a7e4aeab9c45227f85069a46acccf7ba61eabf7bbd08b62ef75c`
 
 ## Latest source-verified checkpoint
 
-`Build 0.3.13 / PATCH-33` is a release-only W1-P0 fix on top of Build 0.3.12. It closes source-level Offline Capability Manifest and rollback-readiness blockers without changing product/domain behavior.
+`Build 0.3.14 / PATCH-34` is a release-only W1-P0 accessibility/source-integrity fix on top of Build 0.3.13. It does **not** add product scope and does **not** issue the Final Release Certificate.
 
 Public-safe verification summary:
 
-- Offline Capability Manifest/source readiness: `25 assertions PASS`
-- Source rollback drill to exact Build 0.3.12: `326 assertions PASS`
-- Employee Experience pure: `62 assertions PASS`
-- Security/source guards: `25/25 PASS`
+- Release accessibility source contract: `10/10 PASS`
+- AST JSX accessibility audit: `27 product TSX / 0 issues`
+- Source scope + rollback to exact Build 0.3.13: `331 assertions PASS`
+- Offline Capability Manifest/source readiness: `22 assertions PASS`
 - Golden E2E source roll-up: `10/10 PASS` (`53 assertions`)
 - Persona certification: `7/7 PASS` in deterministic source cases
 - RBAC leakage: `0` in source positive/negative cases
 - Persona/RBAC/Invariants suite: `88 assertions PASS`
+- Security/source guards: `25/25 PASS`
+- Dependency-free runnable regression: `136/136 PASS`
 - Route gate: `271/271` unique, `1173/1173` tab round-trips, `271/271` fallback
-- TS/TSX parse: `150 files / 0 errors`
+- TS/TSX parse: `148 files / 0 errors`
 - CSS brace balance: `0`
 - Source ZIP integrity: `PASS`
 
-PATCH-33 keeps remote demo persona photos for online presentation but every product rendering has a local `/persona-fallback.svg` when the network image fails. The machine-readable Offline Capability Manifest explicitly marks production OTP/SSO, real payment, live connectors, live AI provider execution and external publishing as unavailable or fixture-only offline. No DB, Drizzle, API route, entitlement, payment, session or domain-state source is changed by PATCH-33.
+PATCH-34 aligns the source with the frozen Design Contract: body baseline is 16px, shared interactive targets are at least 44px, raw controls have accessible names/label association, AI Video Storyboard icon-only actions have Persian screen-reader names, and unused legacy ChatGPT-auth source was removed. The Offline Capability Manifest identity is aligned to Build 0.3.14/PATCH-34. No `app/api`, `db`, `drizzle` or domain-state source was changed.
 
 Dependency-backed release build is **NOT RE-VERIFIED**. `npm run build` exits `69` before application compilation because `vinext` is unavailable. A dependency-install attempt in the current runtime reached npm registry requests but repeatedly failed with `EAI_AGAIN` DNS/network resolution errors. This remains a runtime/network dependency blocker, not a source compile failure and not a build PASS.
 
