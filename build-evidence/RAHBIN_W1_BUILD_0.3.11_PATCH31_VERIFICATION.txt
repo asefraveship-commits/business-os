@@ -1,0 +1,47 @@
+RAHBIN W1 — Build 0.3.11 / PATCH-31 Public Verification Evidence
+Date: 2026-08-30
+Architecture: RAHBIN-ARCH-V2.4.9-r2
+Frozen implementation release: RAHBIN-W1-FREEZE-2026-08-29
+Workstream: W1-12 AI Video Producer Beta
+Status: SOURCE COMPLETE / SOURCE-VERIFIED FREEZE
+Deployment: NOT PERFORMED
+Live video provider: NOT CLAIMED
+Autonomy: L2 EXECUTE WITH APPROVAL
+
+Verification gates:
+- AI Video static contract: 20/20 PASS
+- AI Video pure state machine: 23 assertions PASS
+- S18 source-contract audit: 27/27 PASS
+- DB/API security audit: 15/15 PASS
+- Dependency-free runnable regression: 135/135 PASS
+- React/Vite-backed tests blocked by unavailable dependencies: 9; not counted as PASS
+- Strict pure TypeScript: PASS
+- TS/TSX parse: 149 files / 0 errors
+- Route gate: 271/271 unique; 1173/1173 tab round-trips; 271/271 fallback PASS
+- Protected operational + Commercial Core: 10/10 byte-identical versus exact Build 0.3.10
+- CSS brace balance: 0
+- Source ZIP integrity: PASS
+
+Source ZIP SHA-256:
+4582c317ed29ecdf0ccd5e9d4e02f7c5bfa95299c67206e24dbfe473546d3331
+
+Source boundaries verified:
+- W1 contains only AI Video Producer Beta; full M17 and other Digital Roles remain out of W1.
+- Public provider/model/credential injection is denied.
+- Public Product Truth injection is denied.
+- Approval and budget authority are server/persona governed.
+- L3/L4 autonomy is denied in W1.
+- External live publish is unavailable; public publish action is demo-only and requires Human Approval.
+- Provider abstraction uses controlled deterministic fixtures and does not claim a live provider connection.
+
+Dependency-backed build attempt:
+- npm run build exit 69 BEFORE application compilation
+- blocker: vinext unavailable in current runtime
+- classification: environment/dependency blocker
+- dependency-backed build: NOT RE-VERIFIED
+- this is NOT recorded as a build PASS or source compile failure
+
+Source authority remains Google Sheet CURRENT. This public evidence intentionally excludes proprietary pricing, private RBAC details, credentials, customer data, private source documents and confidential Sheet exports.
+
+Next frozen path:
+W1-13 Release Certification — 10 Golden Scenarios, RBAC leakage=0, P0 inconsistency=0, dead buttons=0, reset/failure recovery and release smoke QA.
