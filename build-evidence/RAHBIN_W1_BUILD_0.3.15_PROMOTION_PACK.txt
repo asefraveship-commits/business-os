@@ -1,0 +1,31 @@
+RAHBIN W1 — PUBLIC-SAFE PROMOTION READINESS EVIDENCE
+Build: RAHBIN-W1-BUILD-0.3.15
+Checkpoint: PATCH-35
+Status: PROMOTION PACK READY / FINAL CERT BLOCKED
+DEPLOYMENT-VERIFIED: NO
+
+Source ZIP SHA-256:
+b17296cbcfcace58b7d15bb218a589f45d36825429e5ee790b88ce9089fefbe0
+
+Rendered certification kit SHA-256:
+26bed15635f950c73db47231be3a42d13e3a8418ef64f0d3ec3ef38f0be4d231
+
+RC runner bundle SHA-256:
+4dc8ca4d942b50ecddc042aa79bfd19586f2dc2a2df8e6c039fe46f2c72abfcb
+
+Release promotion pack SHA-256:
+8239fe825a9fb485ff088e4438bce81d4078c2cc1e66c920d7f73eb6d8e2f9eb
+
+PROMOTION CONTRACT
+- RC -> Canary -> Stable must use the same certified artifact; no rebuild between stages.
+- Promotion guard verifies the exact Source, Rendered Kit and RC Runner identities before use.
+- DEPLOYMENT-VERIFIED remains NO until the stable URL is actually published and read back.
+- Canary telemetry is not enabled before Persona/RBAC/privacy review.
+- Minimal telemetry must carry release/artifact identity and must not collect salary, payslip, national-ID, bank, private HR/investigation content, customer message bodies, credentials, tokens or auth cookies by default.
+
+CURRENT BLOCKER
+- Exact dependency-backed build is still pending because the current sandbox cannot resolve registry.npmjs.org.
+- This is an environment/network blocker; source defect is not established.
+
+W1 RELEASE ROLL-UP: 90%
+Promotion readiness alone does not count as rendered/runtime/deployment PASS.
