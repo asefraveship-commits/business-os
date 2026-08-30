@@ -3,29 +3,33 @@ Build: RAHBIN-W1-BUILD-0.3.15
 Checkpoint: PATCH-35
 Status: PROMOTION PACK READY / FINAL CERT BLOCKED
 DEPLOYMENT-VERIFIED: NO
+W1 RELEASE: 90%
 
 Source ZIP SHA-256:
 b17296cbcfcace58b7d15bb218a589f45d36825429e5ee790b88ce9089fefbe0
 
-Rendered certification kit SHA-256:
-26bed15635f950c73db47231be3a42d13e3a8418ef64f0d3ec3ef38f0be4d231
+Matrix-aligned rendered certification kit SHA-256:
+50e6052c70c8ae44a461cfd6b59d3fe03366e7eec0830bcbba57960fa9a32022
 
 RC runner bundle SHA-256:
-4dc8ca4d942b50ecddc042aa79bfd19586f2dc2a2df8e6c039fe46f2c72abfcb
+080b363c31de183a096783295edc9257bd79f14893dfada881dd5fbdaf94bad5
 
 Release promotion pack SHA-256:
-8239fe825a9fb485ff088e4438bce81d4078c2cc1e66c920d7f73eb6d8e2f9eb
+fae8a676a8667aec06d7818f11b7eeca1668c56e44d0223ccb842e78b9e2c945
+
+Built Artifact Packager SHA-256:
+bfd3271242a43e756916c16a3265be4c4cbe38ff6df14cd7f0092b6be08f92e2
 
 PROMOTION CONTRACT
-- RC -> Canary -> Stable must use the same certified artifact; no rebuild between stages.
-- Promotion guard verifies the exact Source, Rendered Kit and RC Runner identities before use.
-- DEPLOYMENT-VERIFIED remains NO until the stable URL is actually published and read back.
-- Canary telemetry is not enabled before Persona/RBAC/privacy review.
-- Minimal telemetry must carry release/artifact identity and must not collect salary, payslip, national-ID, bank, private HR/investigation content, customer message bodies, credentials, tokens or auth cookies by default.
+- RC → Canary → Stable must use the same immutable built artifact; no rebuild between stages.
+- Promotion guard pins exact Source, Matrix-aligned Rendered Kit and RC Runner identities.
+- The current sidecar explicitly requires Critical Action Smoke, Commercial Reconciliation, deterministic Failure/Recovery and Demo Reset in addition to Golden/Persona/RTL/A11y/security evidence.
+- DEPLOYMENT-VERIFIED remains NO until stable publication and read-back actually occur.
+- Canary telemetry is not enabled before Persona/RBAC/privacy review and may not collect sensitive HR/payroll/private content by default.
 
 CURRENT BLOCKER
-- Exact dependency-backed build is still pending because the current sandbox cannot resolve registry.npmjs.org.
-- This is an environment/network blocker; source defect is not established.
+- Exact dependency-backed build remains pending because current sandbox DNS cannot resolve registry.npmjs.org.
+- Rebuilt runner passes identity + R01 + R01.5 Matrix Contract 10/10 before stopping at R02.
+- Environment/network blocker; source defect is not established.
 
-W1 RELEASE ROLL-UP: 90%
 Promotion readiness alone does not count as rendered/runtime/deployment PASS.
