@@ -1,0 +1,73 @@
+RAHBIN W1 — PUBLIC-SAFE RELEASE EVIDENCE
+Build: RAHBIN-W1-BUILD-0.3.15
+Checkpoint: PATCH-35
+Classification: W1-P0 Release Security Fix
+Status: SOURCE PASS / FINAL CERT BLOCKED
+DEPLOYMENT-VERIFIED: NO
+
+Source ZIP SHA-256:
+b17296cbcfcace58b7d15bb218a589f45d36825429e5ee790b88ce9089fefbe0
+
+Rendered certification kit SHA-256:
+26bed15635f950c73db47231be3a42d13e3a8418ef64f0d3ec3ef38f0be4d231
+
+RC runner bundle SHA-256:
+4dc8ca4d942b50ecddc042aa79bfd19586f2dc2a2df8e6c039fe46f2c72abfcb
+
+PATCH-35 PURPOSE
+- Harden unexpected public API 5xx error surfaces.
+- Raw backend exception messages are no longer returned for unexpected internal failures.
+- Governed and user-safe known 403/409 policy messages remain preserved.
+- No new product scope was added.
+- No database schema, Drizzle model, domain library, product component, or Worker behavior changed.
+
+SOURCE VERIFICATION
+- PATCH-35 release-security verifier: 17/17 PASS
+- Source scope + rollback to exact 0.3.14: 410 assertions PASS
+- Offline source readiness: 22 assertions PASS
+- Golden source roll-up: 10/10 PASS, 53 assertions
+- Persona source certification: 7/7 PASS
+- RBAC source leakage: 0
+- Persona/RBAC/Invariants: 88 assertions PASS
+- Security/source guards: 25/25 PASS
+- Runnable dependency-free Node tests in current sandbox: 137/137 PASS
+- Dependency-backed tests unavailable in current sandbox: 9; all blocked by ERR_MODULE_NOT_FOUND for react/vite rather than assertion failures
+- Routes: 271/271 unique, 1173/1173 tab round-trips, 271/271 fallback
+- TS/TSX parse: 148 files, 0 parse errors
+- CSS brace balance: 0
+- Suspicious raw public 5xx exception-message scan: 0
+- Source ZIP integrity: PASS
+
+BUILD / RUNTIME STATUS
+- Exact dependency-backed build is NOT certified in the current sandbox.
+- Current sandbox cannot resolve registry.npmjs.org.
+- Exact lockfile references 831 registry tarballs; available local cache covers 44, leaving 787 unavailable.
+- npm run build exits 69 before application compilation because vinext is unavailable in this environment.
+- An independent diagnostic on an older Aug-29 source built successfully on a network-capable environment; this supports an environment-root-cause hypothesis but does not certify exact 0.3.15.
+- Canonical rendered-certification runtime for this source: npm run dev using Vite + @cloudflare/vite-plugin/workerd.
+
+RENDERED CERTIFICATION SIDECAR
+The frozen rendered-cert kit/runner is prepared to verify the exact source identity before execution and collect:
+- Rendered Golden 10 evidence
+- Persona 7/7 + RBAC/security evidence
+- Anonymous protected-API rejection checks
+- Session cookie security flags
+- Persian RTL and responsive viewport evidence
+- Keyboard/reduced-motion automated checks
+- Manual screen-reader/full keyboard checklist
+- Security-header and third-party-host inventory
+- Screenshots, JSON and runtime logs
+
+REMAINING FINAL CERT GATES
+1. Exact dependency-backed build on the frozen source SHA.
+2. Cloudflare Vite/workerd rendered runtime.
+3. Rendered Golden 10/10.
+4. Rendered Persona 7/7 + security verification.
+5. Rendered RTL/Persian/responsive certification.
+6. Automated + manual accessibility evidence.
+7. Security-header review on the rendered RC.
+8. Offline Artifact smoke on the same RC.
+9. Runtime rollback drill.
+10. RC → Canary → Stable promotion of the same artifact without rebuild.
+
+Final Release Certificate remains BLOCKED until all remaining rendered/runtime/deployment gates pass.
