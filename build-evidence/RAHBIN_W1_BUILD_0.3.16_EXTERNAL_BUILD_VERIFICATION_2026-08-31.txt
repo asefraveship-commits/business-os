@@ -1,0 +1,41 @@
+RAHBIN W1 BUILD 0.3.16 / PATCH-36 — EXACT BUILD VERIFICATION EVIDENCE
+Date: 2026-08-31
+Classification: public-safe release evidence only; no proprietary source bytes included.
+
+Authoritative Source:
+RAHBIN | Master Product Catalog & Governance | CURRENT W1-FROZEN — V2.4.9-r2
+Spreadsheet ID: 1erYb2LGqCs5AclyxRDN6C3hWNTIlibuo-DgZGA7uQOE
+
+Exact source identity independently re-verified in current execution environment:
+- Source ZIP size: 4,592,574 bytes
+- Source ZIP SHA256: f38bd66c86b2a68bba4176555707658360cb2badc4e9a6dc50d273d72f5874f5
+- package-lock.json SHA256: 822bdd7a3d85396571c47e2de6984bad5059a8a654099fcb3a2f89920a2b2272
+- package version: 0.3.16
+
+External network-capable AI-agent execution on the exact artifact reported:
+- npm ci: 686 packages, zero errors
+- npm run build: all 5 stages PASS
+- canonical npm run dev (Cloudflare Vite / Miniflare): reached `VITE v8.0.13 ready in 11837 ms`
+
+Release interpretation:
+- W1-R02 Dependency-backed Build: PASS / factual build question closed.
+- W1-R03 Runtime: PARTIAL. Vite/workerd boot reached readiness, but an HTTP 200 response was not captured before the external agent tool ended.
+- Immutable built-artifact SHA from the official RAHBIN pipeline is still missing.
+- Rendered Golden/Persona/RBAC/Security, RTL/Responsive/A11y/headers, Offline/Rollback, same-artifact RC→Canary→Stable, Matrix G0-G15 roll-up and Final Cert remain pending.
+- DEPLOYMENT-VERIFIED: NO.
+
+Governance update:
+- W1 Release actual advanced from 90% to 92% because a real dependency-backed build gate closed.
+- Do not repeat Base64 split, Dropbox temporary URL, Replit Drive-auth, or Vercel workaround work for the build question unless all direct exact-artifact paths become unavailable again.
+
+Next exact sequence:
+1. Create/hash immutable built artifact in official repeatable pipeline using exact PATCH-36.
+2. Run canonical npm run dev on same candidate and require GET / = HTTP 200 with retained logs.
+3. Run rendered Golden 10 + CERT-G1/G13/G14/RESET.
+4. Run Persona 7 + RBAC/Security.
+5. RTL/Responsive/A11y + actual response headers/third-party request inventory + manual keyboard/screen-reader review.
+6. Offline built-RC smoke + runtime rollback.
+7. Pre-Canary privacy/telemetry validation.
+8. Promote exact same built-artifact SHA RC→Canary→Stable, no rebuild.
+9. Matrix G0-G15 roll-up.
+10. Hardened Final Cert Evaluator; only then W1 Close.
